@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestBubbleSort(t *testing.T) {
+func TestSelectionSort(t *testing.T) {
 	tests := []struct {
 		name  string
 		input []int
@@ -18,7 +18,7 @@ func TestBubbleSort(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			result := BubbleSort(test.input)
+			result := SelectionSort(test.input)
 			if !slices.Equal(result, test.want) {
 				t.Errorf("want %v got %v", test.want, result)
 			}
